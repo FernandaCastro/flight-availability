@@ -1,0 +1,56 @@
+<!DOCTYPE xs:schema [
+        <!ELEMENT xs:schema (xs:element)*>
+        <!ATTLIST xs:schema
+                attributeFormDefault CDATA #REQUIRED
+                elementFormDefault CDATA #REQUIRED
+                xmlns:xs CDATA #REQUIRED>
+        <!ELEMENT xs:element (xs:complexType)*>
+        <!ATTLIST xs:element
+                maxOccurs CDATA #IMPLIED
+                minOccurs CDATA #IMPLIED
+                name CDATA #REQUIRED
+                type CDATA #IMPLIED>
+        <!ELEMENT xs:complexType (xs:sequence|xs:attribute)*>
+        <!ELEMENT xs:sequence (xs:element)*>
+        <!ELEMENT xs:attribute (#PCDATA)>
+        <!ATTLIST xs:attribute
+                type CDATA #REQUIRED
+                name CDATA #REQUIRED
+                use CDATA #REQUIRED>
+        ]>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Availability">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Flight" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="CarrierCode"/>
+              <xs:element type="xs:string" name="FlightDesignator"/>
+              <xs:element type="xs:string" name="OriginAirport"/>
+              <xs:element type="xs:string" name="DestinationAirport"/>
+              <xs:element type="xs:dateTime" name="DepartureDate"/>
+              <xs:element type="xs:dateTime" name="ArrivalDate"/>
+              <xs:element name="Fares">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Fare" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="BasePrice"/>
+                          <xs:element type="xs:string" name="Fees"/>
+                          <xs:element type="xs:string" name="Tax"/>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="class" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

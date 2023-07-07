@@ -1,0 +1,63 @@
+{
+  "availability" : [ {
+    "flight" : {
+      "operator" : "EI",
+      "flightNumber" : "EI554",
+      "departsFrom" : "DUB",
+      "arrivesAt" : "DEL",
+      "departsOn" : {
+        "date: " : "02-01-2014",
+        "time: " : "10:48am"
+      },
+      "arrivesOn" : {
+        "date: " : "02-01-2014",
+        "time: " : "13:04pm"
+      },
+      "flightTime" : "02:16",
+      "farePrices" : {
+        "first" : {
+          "ticket" : {
+            "currency" : "EUR",
+            "amount" : "272.00"
+          },
+          "bookingFee" : {
+            "currency" : "EUR",
+            "amount" : "17.00"
+          },
+          "tax" : {
+            "currency" : "EUR",
+            "amount" : "13.60"
+          }
+        },
+        "business" : {
+          "ticket" : {
+            "currency" : "EUR",
+            "amount" : "136.00"
+          },
+          "bookingFee" : {
+            "currency" : "EUR",
+            "amount" : "17.00"
+          },
+          "tax" : {
+            "currency" : "EUR",
+            "amount" : "13.60"
+          }
+        },
+        "economy" : {
+          "ticket" : {
+            "currency" : "EUR",
+            "amount" : "68.00"
+          },
+          "bookingFee" : {
+            "currency" : "EUR",
+            "amount" : "17.00"
+          },
+          "tax" : {
+            "currency" : "EUR",
+            "amount" : "13.60"
+          }
+        }
+      }
+    }
+  } ]
+}
