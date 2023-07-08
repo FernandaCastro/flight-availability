@@ -1,6 +1,6 @@
 ## Flight Availability
 
-This is a REST/JSON Service built upon Spring-Web that requests flights availability info to an REST/XML Airline Mock Service. 
+This is a REST/JSON Service built upon Spring-Web that retrieves flights availability data from an REST/XML Airline Mock Service. 
 
 The availability results are retrieved in
 XML format, and converted into a different JSON model.
@@ -13,11 +13,11 @@ response.
 
 Request params:
 
-    ? origin (origin airport)
-    ? destination (destination airport)
-    ? departureDate 
-    ? returnDate
-    ? passengers (number of passengers)
+    - origin (origin airport)
+    - destination (destination airport)
+    - departureDate 
+    - returnDate
+    - passengers (number of passengers)
 
 
 Response:
